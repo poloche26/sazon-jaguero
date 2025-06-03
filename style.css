@@ -1,0 +1,89 @@
+.logo {
+    width: 70px;
+    margin-right: 12px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+  }
+
+  .logo:hover {
+    transform: scale(1.1);
+  }
+
+  .carrusel {
+    height: 400px;
+    width: 50px;
+    margin: auto;
+  }
+
+  .carousel-item {
+    height: 70vh;    /* Altura proporcional a la pantalla */
+    min-height: 300px;/* Altura mínima para pantallas pequeñas */
+  }
+
+  .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .boton-menu {
+    background-color: rgb(224, 220, 220);
+    color: rgb(137, 90, 175);
+  }
+
+  .boton-menu:hover {
+    color: rgb(241, 241, 241);
+    background-color: rgb(103, 103, 163);
+  }
+
+  .p {
+    background-color: rgb(160, 108, 173);
+    color: white;
+    border-radius: 9px;
+    width: 160px;
+    height: 40px;
+    padding: 5px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .p:hover {
+    transform: scale(1.1);
+  }
+
+  .img {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Contenedor de las cards: las alinea en fila y permite respuesta responsiva */
+.cards-container {
+  display: flexbox;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem; /* Espacio horizontal y vertical entre cards */
+  padding: 1rem;
+}
+
+/* Card: solo define su ancho y comportamiento responsivo */
+.cards-container   {
+  width: 100%;
+  max-width: 18rem; /* Tamaño máximo para mantener consistencia */
+  flex: 1 1 calc(100% - 3rem); /* 1 por fila en móviles */
+}
+
+/* 2 cards por fila en tablets */
+@media (min-width: 576px) {
+  .cards-container .card {
+    flex: 1 1 calc(50% - 3rem);
+  }
+}
+
+/* 3 cards por fila en pantallas medianas y grandes */
+@media (min-width: 768px) {
+  .cards-container .card {
+    flex: 1 1 calc(33.333% - 3rem);
+  }
+}
